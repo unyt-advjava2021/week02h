@@ -25,13 +25,13 @@ public class BestStudentsAppNoLambdas {
     public static void main(String[] args) {
         try {
             BestStudentsAppNoLambdas app = new BestStudentsAppNoLambdas();
-            app.findBestStudents();
+            app.listBestStudents();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void findBestStudents() {
+    private void listBestStudents() {
         Map<String, Student> topStudentsMap = new HashMap<>();
         for (Student s : students) {
             if ( ! s.graduated() ) {
