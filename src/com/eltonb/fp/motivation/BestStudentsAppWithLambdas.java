@@ -33,14 +33,13 @@ public class BestStudentsAppWithLambdas {
     public static void main(String[] args) {
         try {
             BestStudentsAppWithLambdas app = new BestStudentsAppWithLambdas();
-            app.findBestStudents();
+            app.listBestStudents();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void findBestStudents() {
-        Supplier<String> x;
+    private void listBestStudents() {
         students.stream()
                 .filter(s -> ! s.graduated())
                 .collect(Collectors.groupingBy(
